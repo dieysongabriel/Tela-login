@@ -38,6 +38,13 @@ input {
     border-radius: 4px;
     width: 90%;
 }
+select {
+    margin-bottom: 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 92%;
+}
 
 .button-container {
     display: flex;
@@ -54,7 +61,7 @@ button {
     margin: 0 5px;
 
 }
-button#enviar {
+button#salvar {
     background: green;
 }
 button#limparBtn {
@@ -67,7 +74,7 @@ button#editarBtn {
 button:hover {
     opacity: 0.8;
 }
-#res {
+.resultado, .res {
     margin-top: 20px;
     padding: 10px;
     border-radius: 4px;

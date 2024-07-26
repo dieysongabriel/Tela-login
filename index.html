@@ -11,48 +11,79 @@
         <h1>Cadastro</h1>
         <form id="cadastroForm">
             <label for="name">Nome: </label>
-            <input type="text" name="nome" id="name">
+            <input type="text" name="nome" id="nome">
 
 
             <label for="address">Endereço: </label>
-            <input type="text" name="endereço" id="address" required>
+            <input type="text" name="endereco" id="endereco" required>
 
 
             <label for="number">Número: </label>
-            <input type="text" name="numero" id="number" required>
+            <input type="number" name="numero" id="numero" required>
 
 
             <label for="icomplemento">Complemento: </label>
-            <input type="text" name="complemento" id="icomplemento" >
+            <input type="text" name="complemento" id="complemento" >
 
             <label for="ibairro">Bairro: </label>
-            <input type="text" name="bairro" id="ibairro" required>
+            <input type="text" name="bairro" id="bairro" required>
 
 
             <label for="city">Cidade: </label>
-            <input type="text" name="cidade" id="city" required>
+            <input type="text" name="cidade" id="cidade" required>
 
 
             <label for="iuf">UF: </label>
-            <input type="text" name="uf" id="iuf" required>
+            <select name="uf" id="uf">
+                <option value="">Selecione um UF</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                
+            </select>
 
 
             <label for="phone-number">Telefone: </label>
-            <input type="text" name="telefone" id="phone-number" required>
+            <input type="text" name="telefone" id="telefone" required placeholder="(00) 12345-6789">
 
 
             <label for="iemail">Email: </label>
-            <input type="email" name="email" id="iemail" required>
+            <input type="email" name="email" id="email" required>
 
             <div class="btn-container">
-                <button type="submit" id="enviar">Enviar</button>
-                <button type="button" id="limparBtn" onclick="clicou()">Limpar</button>
-                <button type="button" id="editarBtn">Editar</button>
+                <button type="submit" id="salvar">Salvar</button>
+                <button type="button" id="limparBtn">Limpar</button>
+                <button type="button" id="verListaBtn">Ver Lista</button>
+                <button type="button" id="editarBtn" disabled>Editar</button>
             </div>
         </form>
-        <div id="res">
+        <div class="res"></div>
 
-        </div>
+        <div class="lista" ></div>
         <script src="script.js"></script>
         
     </div>
