@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cadastros', JSON.stringify(cadastros));
         form.reset();
         mostrarMensagem('Dados salvos com sucesso!');
+        if(dados.cidade == 0) {
+            console.log('Por Favor Preencha todos os campos')
+        }
     };
 
     // Função para limpar o formulário
@@ -116,3 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.editarCadastro = editarCadastro;
     window.deletarCadastro = deletarCadastro;
 });
+
+document.getElementById('telefone').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9 ()]/g, '')
+
+})
