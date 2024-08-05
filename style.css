@@ -1,24 +1,57 @@
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     background: black;
-    justify-content: center;
-    align-items: center;
+    
     height: 100vh;
     margin: 0;
     
 }
+.form-group {
+    margin: 18px;
+}
 
+.form-group label {
+    margin-right: 0px;
+}
+label#name {
+    margin-right: 107px;
+}
+#endereco {
+    margin-right: 80px;
+}
+#number  {
+    margin-right: 91px;
+}
+#complemento {
+    margin-right: 48px;
+}
+#bairro {
+    margin-right: 105px;
+}
+#cidade {
+    margin-right: 97px;
+}
+#iuf{
+    margin-right: 127px;
+}
+#telefone {
+    margin-right: 87px;
+}
+#iemail {
+    margin-right: 107px;
+}
 #container {
     background-color: gray;
     padding: 20px;
-    border-radius: 8px;
+    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    height: 550px;
+    width: 97%;
+    height: 600px;
     color: white;
-    max-width: 400px;
+    ;
 }
 
 h1 {
@@ -26,29 +59,27 @@ h1 {
     color: white;
     margin: 5px;
 }
-form {
-    display: flex;
-    flex-direction: column;
 
-}
 input {
     margin-bottom: 5px;
     padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 90%;
+    width: 900px;
+    
 }
 select {
     margin-bottom: 5px;
     padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 92%;
+    width: 400px;
 }
 
 .button-container {
     display: flex;
     justify-content: space-between;
+    
 }
 button {
     padding: 10px;
@@ -58,7 +89,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     flex: 1;
-    margin: 0 5px;
+    margin: 0 10px;
 
 }
 button#salvar {

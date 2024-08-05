@@ -10,31 +10,45 @@
     <div id="container">
         <h1>Cadastro</h1>
         <form id="cadastroForm">
-            <label for="name">Nome: </label>
-            <input type="text" name="nome" id="nome">
+            <div class="form-group">
+                <label for="name" id="name">Nome: </label>
+                <input type="text" name="nome" id="nome">
+            </div>
 
 
-            <label for="address">Endereço: </label>
-            <input type="text" name="endereco" id="endereco" required>
+            <div class="form-group">
+                <label for="address" id="endereco">Endereço: </label>
+                <input type="text" name="endereco" id="endereco" required>
+            </div>
 
 
-            <label for="number">Número: </label>
-            <input type="number" name="numero" id="numero" required>
+            <div class="form-group">
+                <label for="number" id="number">Número: </label>
+                <input type="number" name="numero" id="numero" required>
+            </div>
 
 
-            <label for="icomplemento">Complemento: </label>
-            <input type="text" name="complemento" id="complemento" >
+            <div class="form-group">
+                <label for="icomplemento" id="complemento">Complemento: </label>
+                <input type="text" name="complemento" id="complemento" >
+            </div>
 
-            <label for="ibairro">Bairro: </label>
-            <input type="text" name="bairro" id="bairro" required>
+            <div class="form-group">
+                <label for="ibairro" id="bairro">Bairro: </label>
+                <input type="text" name="bairro" id="bairro" required>
+            </div>
 
 
-            <label for="city">Cidade: </label>
-            <input type="text" name="cidade" id="cidade" required>
+            <div class="form-group">
+                <label for="city" id="cidade">Cidade: </label>
+                <input type="text" name="cidade" id="cidade" required>
+            </div>
 
 
-            <label for="iuf">UF: </label>
-            <select name="uf" id="uf">
+            <div class="form-group">
+                <label for="iuf" id="iuf">UF: </label>
+                <select name="uf" id="uf">
+            
                 <option value="">Selecione um UF</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
@@ -65,14 +79,18 @@
                 <option value="TO">Tocantins</option>
                 
             </select>
+        </div>
+
+            <div class="form-group">
+                <label for="phone-number" id="telefone">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" required placeholder="(00) 12345-6789">
+            </div>
 
 
-            <label for="phone-number">Telefone: </label>
-            <input type="tel" name="telefone" id="telefone" required placeholder="(00) 12345-6789">
-
-
-            <label for="iemail">Email: </label>
-            <input type="email" name="email" id="email" required>
+            <div class="form-group">
+                <label for="iemail" id="iemail">Email: </label>
+                <input type="email" name="email" id="email" required>
+            </div>
 
             <div class="btn-container">
                 <button type="submit" id="salvar">Salvar</button>

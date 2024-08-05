@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const salvarDados = (event) => {
         event.preventDefault();
         
+        
         const dados = {
             nome: form.nome.value,
             endereco: form.endereco.value,
@@ -30,18 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (editIndex === -1) {
             cadastros.push(dados);
-        } else {
+        }else {
             cadastros[editIndex] = dados;
             editIndex = -1;
             btnEditar.disabled = true;
         }
-        
+
         localStorage.setItem('cadastros', JSON.stringify(cadastros));
         form.reset();
         mostrarMensagem('Dados salvos com sucesso!');
-        if(dados.cidade == 0) {
-            console.log('Por Favor Preencha todos os campos')
+        
+        if(dados.nome == 0 || dados.endereco == 0 || dados.numero == 0 || dados.bairro == 0 || dados.cidade == 0  || dados.uf == 0 || dados.telefone == 0 || dados.email == 0) {
+            mostrarMensagem('Por Favor Preencha todos os campos');
+            
+            
+
         }
+        
     };
 
     // Função para limpar o formulário
@@ -123,4 +129,5 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('telefone').addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9 ()]/g, '')
 
-})
+});
+
