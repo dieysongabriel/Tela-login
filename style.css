@@ -3,82 +3,87 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background: black;
-    
+    background: white;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     
 }
-.form-group {
-    margin: 18px;
-}
 
-.form-group label {
-    margin-right: 0px;
-}
-label#name {
-    margin-right: 107px;
-}
-#endereco {
-    margin-right: 80px;
-}
-#number  {
-    margin-right: 91px;
-}
-#complemento {
-    margin-right: 48px;
-}
-#bairro {
-    margin-right: 105px;
-}
-#cidade {
-    margin-right: 97px;
-}
-#iuf{
-    margin-right: 127px;
-}
-#telefone {
-    margin-right: 87px;
-}
-#iemail {
-    margin-right: 107px;
-}
 #container {
-    background-color: gray;
+    background-color: white;
     padding: 20px;
     
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 97%;
-    height: 600px;
-    color: white;
+    height: 580px;
+    color: black;
     ;
 }
 
+
 h1 {
     text-align: center;
-    color: white;
+    color: black;
     margin: 5px;
 }
-
-input {
+#name {
+    margin-right: 30px;
+}
+#number {
+    margin-right: 17px;
+}
+#ibairro {
+    margin-right: 31px
+}
+#iuf {
+    margin-right: 53px;
+}
+#address {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.form-group {
+    display: flex;
+    justify-content: spae-between;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#email {
+    width: 1160px;
+}
+#icomplemento {
+    margin-left: 20px;
+    margin-right: 38px;
+}
+#city {
+    margin-left: 20px;
+    margin-right: 28px;
+}
+#phone-number {
+    margin-left: 30px;
+    margin-right: 17px;
+}
+input, select {
     margin-bottom: 5px;
     padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 900px;
+    width: 520px;
+
+    display: flex;
+    flex-direction: row
+    ;
     
 }
-select {
-    margin-bottom: 5px;
-    padding: 4px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 400px;
-}
+
 
 .button-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     
 }
 button {
