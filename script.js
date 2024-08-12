@@ -10,9 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const lista = document.querySelector('.lista');
     let editIndex = -1;
 
+    //Função para validar os campos de formulário
+    const validarCampos = () => {
+        const campos = [
+            form.nome.value,
+            form.endereco.value,
+            form.bairro.value,
+            form.cidade.value,
+            form.uf.value,
+            form.telefone.value,
+            form.email.value
+        ];
+
+        return campos.every(campo => campo.trim()  !== '');
+    };
+
     // Função para salvar os dados do formulário
     const salvarDados = (event) => {
         event.preventDefault();
+
+        if(!validarCampos()) {
+            mostrarMensagem('Por favor, preencha todos os campos.');
+            return; // Não prosseguir se algum campo estiver vazio
+        }
         
         
         const dados = {
@@ -40,13 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cadastros', JSON.stringify(cadastros));
         form.reset();
         mostrarMensagem('Dados salvos com sucesso!');
-        
-        if(dados.nome == 0 || dados.endereco == 0 || dados.numero == 0 || dados.bairro == 0 || dados.cidade == 0  || dados.uf == 0 || dados.telefone == 0 || dados.email == 0) {
-            mostrarMensagem('Por Favor Preencha todos os campos');
-            
-            
-
-        }
         
     };
 
