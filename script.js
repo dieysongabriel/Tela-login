@@ -10,20 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const lista = document.querySelector('.lista');
     let editIndex = -1;
 
+    const validateForm = () => {
+        const email = form.complemento.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            mostrarMensagem('Por favor, insira um endereço de e-mail válido.');
+            return false;
+        }
+
+        return true;
+    };
+
+
     //Função para validar os campos de formulário
     const validarCampos = () => {
         const campos = [
             form.nome.value,
             form.endereco.value,
-            form.bairro.value,
             form.cidade.value,
             form.uf.value,
             form.telefone.value,
-            form.email.value
+            
         ];
 
         return campos.every(campo => campo.trim()  !== '');
     };
+
+    
 
     // Função para salvar os dados do formulário
     const salvarDados = (event) => {
@@ -33,18 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarMensagem('Por favor, preencha todos os campos.');
             return; // Não prosseguir se algum campo estiver vazio
         }
+        if(!validateForm()) {
+            return; //Não prosseguir se a validaçao falhar
+        }
         
         
         const dados = {
             nome: form.nome.value,
             endereco: form.endereco.value,
             numero: form.numero.value,
-            complemento: form.complemento.value,
             bairro: form.bairro.value,
             cidade: form.cidade.value,
             uf: form.uf.value,
             telefone: form.telefone.value,
-            email: form.email.value
+            email: form.complemento.value
         };
         
         let cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
@@ -138,9 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.editarCadastro = editarCadastro;
     window.deletarCadastro = deletarCadastro;
 });
-
 document.getElementById('telefone').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9 ()]/g, '')
-
+    this.value = this.value.replace(/[^0-9 ()]/g, '');
 });
+
+
 
